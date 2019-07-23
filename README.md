@@ -28,7 +28,7 @@ report.init();
 ```
 <html>
 <head>
-  <script src="../dist/rrd-web-report-default.js"></script>
+  <script src="../dist/rrd-web-report-sdk.js"></script>
   <script>
     const report = window.WebReport({
         domain: domain, // the target api to report
@@ -44,32 +44,23 @@ report.init();
 ## 2. Configuration
 
 ##### domain
-The target api
-`default value: 'http://localhost/api'`
+The target api. `default value: 'http://localhost/api'`
 ##### filterUrl 
-Filter url that we don't want to report. 
-`default value: []`
+Filter url that we don't want to report. `default value: []`
 ##### openVisitorReport 
-Open PV/UV report or not. 
-`default value: true`
+Open PV/UV report or not. `default value: true`
 ##### openResourceReport 
-Open resource report or not.  
-`default value: true`
+Open resource report or not. `default value: true`
 ##### openAjaxReport 
-Open ajax/fetch report or not. 
-`default value: true`
+Open ajax/fetch report or not. `default value: true`
 ##### openErrorReport
-Open error message report or not. 
-`default value: true`
+Open error message report or not. `default value: true`
 ##### openPerformanceReport
-Open performance report or not. 
-`default value: true`
+Open performance report or not. `default value: true`
 ##### extraData
-Extra data including appId. 
-`default value: {}`
+Extra data including appId. `default value: {}`
 ##### loadReportDelay 
-Report delay when we have to report when page onload. 
-`default value: 5000`
+Report delay when we have to report when page onload. `default value: 5000`
 
 ## 3. Data Collection
 
@@ -77,7 +68,7 @@ TODO
 
 ## 4. Do report
 
-We need to quickly report the PV/UV information when loading rrd-web-report-sdk rather than waiting for the page `onload`. It can make the PV/UV information more accurate.
+We need to quickly report the PV/UV information when `loading rrd-web-report-sdk` rather than waiting for the page `onload`. It can make the PV/UV information more accurate.
 ```
 {
 	"time": 1563864488148,
@@ -88,7 +79,7 @@ We need to quickly report the PV/UV information when loading rrd-web-report-sdk 
 }
 ```
 
-We report the resource, performance and error information when the page is `unload`. Because At that moment we can collect the whole information of the target page. We use `Navigator.sendBeacon()` method to do this. Considering compatibility issues, we report those data when the page `onload` if the browser don't support `Navigator.sendBeacon()`.
+We report the resource, performance and error information when the page `unload`. Because we can collect the whole information of the target page at that moment. And then we use `Navigator.sendBeacon()` method to report. Considering compatibility issues, we report those data when the page `onload` if the browser don't support `Navigator.sendBeacon()`.
 By the way, those data sent by `Navigator.sendBeacon()` will have the default configuration `Content-type: text/plain` in `Request Header`.
 
 ```

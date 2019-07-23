@@ -1,0 +1,28 @@
+{
+  "name": "rrd-web-report-sdk",
+  "version": "1.0.6",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "rm -rf ./dist && tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jibacat/web-report-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajax-hook": "^1.8.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "typescript": "^3.5.3"
+  }
+}

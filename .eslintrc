@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "global-require": "off",
+    "indent": ["error", 4],
+    "no-unused-expressions": 0,           
+    "class-methods-use-this": 0,           
+    "no-underscore-dangle": 0,            
+    "arrow-body-style": ["error", "always"], 
+    "max-len": ["error", 200],
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "no-param-reassign": 0,
+    "no-empty": 0,
+    "import/prefer-default-export": 0
+  },
+}
+    

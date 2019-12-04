@@ -1,4 +1,4 @@
-English | [简体中文](http://gitlab.we.com/we-tech-fex/subao-sdk/blob/master/RM-CN.md)
+English | [简体中文](https://github.com/Jibacat/web-report-sdk/blob/master/RM-CN.md)
 
 <h1 align="center">subao-sdk</h1>
 

@@ -1,5 +1,5 @@
 
-[English](http://gitlab.we.com/we-tech-fex/subao-sdk/blob/master/README.md) | 简体中文
+[English](https://github.com/Jibacat/web-report-sdk/blob/master/README.md) | 简体中文
 
 
 <h1 align="center">速报SDK</h1>

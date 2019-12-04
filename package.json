@@ -1,6 +1,6 @@
 {
   "name": "subao-sdk",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A powerful web report package.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

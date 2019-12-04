@@ -3,4 +3,8 @@ src
 .eslintrc
 .eslintignore
 .gitignore
-.tsconfig
+tsconfig.json
+webpack.config.js
+node_modules
+demo.js
+demo.html

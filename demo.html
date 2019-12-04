@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebReport test page</title>
+    <script src="/dist/subao-sdk-1.0.13.min.js"></script>
+    <script>
+        /* init webReport */
+        var report = new window.WebReport({
+            domain: '/report',
+            appId: '111',
+            subaoUserId: '12345',
+            filterUrl: ['/report', 'subao-sdk', 'growingio']
+        });
+        report.init();
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js?a=1&b=2"></script>
+    <link rel="stylesheet" href="/static/a.css"/>
+    <script src="/static/a/321321.js"></script>
+</head>
+<body>
+
+    <button id="button-1">throw error</button>
+    <button id="button-2">manual report error</button>
+    <img src="/static/image.png?a=123" alt=""/>
+
+    <script>
+        /* test js error */
+        document.getElementById('button-1').addEventListener('click', function(e) {
+            throw new Error('click error');
+        });
+        document.getElementById('button-2').addEventListener('click', function(e) {
+            report.manualReportError({
+                url: 'www.renrendai.com/sw.js',
+                message: 'Unexpected error'
+            });
+        });
+    </script>
+
+    <script>
+        /* test xhr and fetch */
+        fetch('/static/aaa/312321?data=123&dd=333', { method: 'post', body: '{a:32}' });
+        fetch('/static/aaa/312321?data=123&dd=333');
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', '/static/bbb/43?a=1&b=2');
+        xhr.onreadystatechange = function() {}
+        xhr.send("{data: '123'}");
+
+    </script>
+    
+</body>
+</html>

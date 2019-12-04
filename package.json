@@ -1,28 +1,37 @@
 {
-  "name": "rrd-web-report-sdk",
-  "version": "1.0.9",
-  "description": "",
+  "name": "subao-sdk",
+  "version": "2.0.0",
+  "description": "A powerful web report package.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rm -rf ./dist && tsc -p tsconfig.json"
+    "build": "rm -rf ./dist && tsc -p tsconfig.json && webpack --mode=production",
+    "dev": "node demo.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jibacat/web-report-sdk.git"
+    "url" : "https://github.com/Jibacat/web-report-sdk.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ajax-hook": "^1.8.3"
+    "ajax-hook": "^1.8.3",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
+    "@types/node": "^12.7.2",
     "@typescript-eslint/parser": "^1.4.2",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-typescript": "^0.14.0",
-    "typescript": "^3.5.3"
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6"
   }
 }
